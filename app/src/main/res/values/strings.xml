@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BookHub</string>
+    <string name="menu_item_dashboard">Dashboard</string>
+    <string name="menu_item_favourite">Menu</string>
+    <string name="menu_item_profile">Profile</string>
+    <string name="menu_item_about">About</string>
+</resources>
