@@ -3,22 +3,29 @@
 
     <item
         android:id="@+id/menu_item_dasboard"
-        android:title="@string/menu_item_dashboard">
+        android:title="@string/menu_item_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        >
     </item>
 
     <item
         android:id="@+id/menu_item_favourite"
-        android:title="@string/menu_item_favourite">
+        android:title="@string/menu_item_favourite"
+        android:icon="@drawable/ic_favourites"
+        >
     </item>
 
     <item
         android:id="@+id/menu_item_profile"
-        android:title="@string/menu_item_profile">
+        android:title="@string/menu_item_profile"
+        android:icon="@drawable/ic_profile">
     </item>
 
     <item
         android:id="@+id/menu_item_about"
-        android:title="@string/menu_item_about">
+        android:title="@string/menu_item_about"
+        android:icon="@drawable/ic_about"
+        >
     </item>
 
 </menu>
