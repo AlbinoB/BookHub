@@ -10,4 +10,5 @@
     <color name="TextColor">#FFFFFF</color>
 
     <color name="Appcolor">#d50000</color>
+    <color name="dashboard_item_background">#e0e0e0</color>
 </resources>

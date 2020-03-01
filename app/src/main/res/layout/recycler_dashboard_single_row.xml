@@ -1,16 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:background="@color/dashboard_item_background"
+    >
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageViewBook"
+        android:background="@drawable/ic_drawer_image"/>
+
+    <TextView
+        android:id="@+id/textViewBookName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toRightOf="@id/imageViewBook"
+        android:text="List Item"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewBookName"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imageViewBook"
+        android:text="Name of author"
+        android:textAlignment="center" />
 
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textViewPrice"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:text="List Item"
-        android:layout_margin="20dp"
-        android:padding="10dp"
-        android:id="@+id/textViewRecyclerItem"
+        android:text="Rs.200"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/imageViewBook"
+        android:layout_below="@id/textViewAuthor"
         />
+
+
+    <!--Many times we see that texts have an image along with them to
+      their right or left. This is added with the help of the
+      drawableLeft (or drawableRight and so on) attribute-->
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewRating"
+        android:text="4.5"
+        android:drawableLeft="@drawable/ic_rating_star"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="0dp"
+        android:layout_alignParentRight="true"
+        />
+
+
+
+
 </RelativeLayout>
