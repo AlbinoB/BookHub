@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/menu_item_dasboard"
-        android:title="@string/menu_item_dashboard"
-        android:icon="@drawable/ic_dashboard"
-        >
-    </item>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_item_dasboard"
+            android:title="@string/menu_item_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            >
+        </item>
 
-    <item
-        android:id="@+id/menu_item_favourite"
-        android:title="@string/menu_item_favourite"
-        android:icon="@drawable/ic_favourites"
-        >
-    </item>
+        <item
+            android:id="@+id/menu_item_favourite"
+            android:title="@string/menu_item_favourite"
+            android:icon="@drawable/ic_favourites"
+            >
+        </item>
 
-    <item
-        android:id="@+id/menu_item_profile"
-        android:title="@string/menu_item_profile"
-        android:icon="@drawable/ic_profile">
-    </item>
+        <item
+            android:id="@+id/menu_item_profile"
+            android:title="@string/menu_item_profile"
+            android:icon="@drawable/ic_profile">
+        </item>
 
-    <item
-        android:id="@+id/menu_item_about"
-        android:title="@string/menu_item_about"
-        android:icon="@drawable/ic_about"
-        >
-    </item>
+        <item
+            android:id="@+id/menu_item_about"
+            android:title="@string/menu_item_about"
+            android:icon="@drawable/ic_about"
+            >
+        </item>
+    </group>
 
 </menu>

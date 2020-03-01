@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activity.MainActivity"
     android:id="@+id/drawerLayout"
     >
 
@@ -15,20 +15,36 @@
         >
 
 
-
-        <androidx.appcompat.widget.Toolbar
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            android:id="@+id/toolBar"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
-            />
+            android:elevation="0dp"
+            >
+            <!-- elivation raise the appbar and gives a shadow -->
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                android:id="@+id/toolBar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                app:layout_scrollFlags="scroll|enterAlways"
+                />
+            <!--app:layout_scrollFlags="scroll|enterAlways" scrollBar scrolls along with the list-->
+        </com.google.android.material.appbar.AppBarLayout>
+
+
         <FrameLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/frameLayout"/>
+            android:id="@+id/frameLayout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
 
+            />
+            <!--app:layout_behavior="@string/appbar_scrolling_view_behavior" will solve the overlapping issue of the appbar and fragment-->
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
