@@ -5,10 +5,21 @@
     <color name="colorAccent">#D81B60</color>
 
 
+
+    <color name="color_preloader_start">#fdb6b6</color>
+    <color name="color_preloader_center">#fdb6b6</color>
+    <color name="color_preloader_end">#090808</color>
+
+    <color name="otp_button">#8DD842</color>
+
+    <color name="floating_button">#e53935</color>
+
+    <color name="light_gray">#F0EDED</color>
+
     <color name="black">#000000</color>
 
     <color name="TextColor">#FFFFFF</color>
 
     <color name="Appcolor">#d50000</color>
-    <color name="dashboard_item_background">#e0e0e0</color>
+    <color name="dashboard_item_background">#ffffff</color>
 </resources>

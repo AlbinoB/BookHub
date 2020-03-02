@@ -21,4 +21,14 @@
         android:id="@+id/recyclerView"
         android:layout_below="@+id/textViewHeading"/>
 
+    <Button
+        android:id="@+id/buttonCheckConnectivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Check Internet"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        />
+
 </RelativeLayout>

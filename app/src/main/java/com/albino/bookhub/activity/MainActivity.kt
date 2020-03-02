@@ -1,8 +1,10 @@
 package com.albino.bookhub.activity
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -13,6 +15,7 @@ import com.albino.bookhub.fragment.DashboardFragment
 import com.albino.bookhub.fragment.FavouriteFragment
 import com.albino.bookhub.fragment.ProfileFragment
 import com.albino.bookhub.R
+import com.albino.bookhub.utils.ConnnectionManager
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -158,7 +161,41 @@ class MainActivity : AppCompatActivity() {
             else ->super.onBackPressed()
         }
     }
+/*
+
+    public fun funCheckConnectivity(view: View){
+        val alterDialog=androidx.appcompat.app.AlertDialog.Builder(this)
+        if(ConnnectionManager().checkConnectivity(this)){
+
+            alterDialog.setTitle("Success")
+            alterDialog.setMessage("Internet Connection Found")
+            alterDialog.setPositiveButton("OK"){text,listener->
+
+            }
+
+            alterDialog.setNegativeButton("Cancel"){ text,listener->
+
+            }
+            alterDialog.create()
+            alterDialog.show()
+        }else
+        {
+
+            alterDialog.setTitle("No Internet")
+            alterDialog.setMessage("Internet Connection can't be establish!")
+            alterDialog.setPositiveButton("OK"){text,listener->
+
+            }
+
+            alterDialog.setNegativeButton("Cancel"){ text,listener->
+
+            }
+            alterDialog.create()
+            alterDialog.show()
+        }
+*/
+    }
 
 
 
-}
+

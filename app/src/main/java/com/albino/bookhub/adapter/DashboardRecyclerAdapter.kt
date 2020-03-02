@@ -4,16 +4,24 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.albino.bookhub.R
+import com.albino.bookhub.model.Book
+import com.squareup.picasso.Picasso
 
 
 //in the constructor val context:Context where to display it and val itemList:ArrayList<String> the data to be displayed
-class DashboardRecyclerAdapter(val context:Context,val itemList:ArrayList<String>):RecyclerView.Adapter<DashboardRecyclerAdapter.DashboardViewHolder>() {//binds the adpater to the viewholder class
+class DashboardRecyclerAdapter(val context:Context,val itemList:ArrayList<Book>):RecyclerView.Adapter<DashboardRecyclerAdapter.DashboardViewHolder>() {//binds the adpater to the viewholder class
 
     class DashboardViewHolder(view:View):RecyclerView.ViewHolder(view){//creating the view holder
-        val textView:TextView=view.findViewById(R.id.textViewBookName)
+        val imageViewBook:ImageView=view.findViewById(R.id.imageViewBook)
+        val textViewAuthor:TextView=view.findViewById(R.id.textViewAuthor)
+        val textViewPrice:TextView=view.findViewById(R.id.textViewPrice)
+        val textViewRating:TextView=view.findViewById(R.id.textViewRating)
+        val textViewBookName:TextView=view.findViewById(R.id.textViewBookName)
+
     }
 
 
@@ -33,7 +41,16 @@ class DashboardRecyclerAdapter(val context:Context,val itemList:ArrayList<String
 
     //is used to display the right view in the right position
     override fun onBindViewHolder(holder: DashboardViewHolder, position: Int) {
-        val text=itemList[position]//gets the item from the itemList sent in the constructor at the position
-        holder.textView.text=text//fill in the recieved data in the holder
+        val book=itemList[position]//gets the item from the itemList sent in the constructor at the position
+        //holder.textView.text=text//fill in the recieved data in the holder
+
+        holder.textViewBookName.text=book.bookName
+        holder.textViewAuthor.text=book.bookAuthor
+        holder.textViewPrice.text=book.bookPrice
+        holder.textViewRating.text=book.bookRating
+        //holder.imageViewBook.setBackgroundResource(book.bookImage)
+        Picasso.get().load(book.bookImage).into(holder.imageViewBook);
+
+
     }
 }
